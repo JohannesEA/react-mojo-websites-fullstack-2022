@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ImageBox = ({ src, alt, text }) => {
+const IphoneBox = ({ src, alt, text }) => {
   return (
     <Container>
       <ImageContainer>
@@ -11,7 +11,7 @@ const ImageBox = ({ src, alt, text }) => {
   );
 };
 
-export default ImageBox;
+export default IphoneBox;
 
 const Container = styled.div`
   display: flex;

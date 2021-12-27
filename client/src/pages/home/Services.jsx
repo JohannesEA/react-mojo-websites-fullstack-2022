@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Title from "../../components/Title";
 import Text from "../../components/Text";
-import Button from "../../components/Button";
 import getWindowDimensions from "../../commonFunctions/Dimentions";
 import IconBox from "../../components/IconBox";
 
@@ -9,7 +8,7 @@ const Services = () => {
   const { width } = getWindowDimensions();
 
   return (
-    <Container>
+    <Container id="services">
       {width > 800 ? (
         <>
           <Left>
@@ -117,9 +116,7 @@ const IconContainer = styled.div`
 `;
 
 
-const ButtonContainer = styled.div`
-  margin: 0 auto;
-`;
+
 
 const Right = styled.div`
 margin: 0;

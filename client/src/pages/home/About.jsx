@@ -10,9 +10,6 @@ import {Link} from "react-scroll";
 const About = () => {
     const { width } = getWindowDimensions();
 
-    const onClick = () => {
-      window.location.href = 'https://johanneseandresen.netlify.app/'; 
-    }
 
     return (
         <Container id="about">
