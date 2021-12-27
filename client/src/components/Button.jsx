@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const Button = ({
     text,
-    btnOnClick,
     bc,
 }) => {
     const [BACKGROUND_COLOR, setBACKGROUNDCOLOR] = useState("");
@@ -25,7 +24,6 @@ const Button = ({
                 setBACKGROUNDCOLOR(BACKGROUND_COLOR_ONE);
                 setCOLOR(COLOR_ONE);
                 setHOVERCOLOR(HOVERCOLOR_ONE);
-                console.log("background: ".BACKGROUND_COLOR);
             } else if (bc === "color-1") {
                 setBACKGROUNDCOLOR(BACKGROUND_COLOR_TWO);
                 setCOLOR(COLOR_TWO);
@@ -43,7 +41,6 @@ const Button = ({
 
     return (
         <MyButton
-            onClick={btnOnClick}
             backgroundcolor={BACKGROUND_COLOR}
             hover={HOVER_COLOR}
             color={COLOR}
@@ -56,21 +53,21 @@ const Button = ({
 export default Button;
 
 const MyButton = styled.button`
-    font-size:1rem;
+    font-size:.8rem;
     font-weight:500;
     z-index: 1;
     border-radius: .5em;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     cursor: pointer;
     border: none;
     background-color: ${(prop) => prop.backgroundcolor};
     color: ${(prop) => prop.color};
-    padding: 10px 14px;
+    padding: 8px 10px;
     &:hover {
         background-color: ${(prop) => prop.hover};
         border-radius: 0em;
     }
-    @media (max-width: 400px) {
-        padding: 8px 12px;
+    @media (max-width: 800px) {
+        padding: 6px 8px;
     }
 `;

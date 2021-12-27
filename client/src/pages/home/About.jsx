@@ -11,4 +11,7 @@ const About = () => {
 
 export default About;
 
-const Container = styled.div``;
+const Container = styled.div`
+height: 20vh;
+
+`;

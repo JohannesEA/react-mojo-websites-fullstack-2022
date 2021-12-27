@@ -33,6 +33,6 @@ const Container = styled.h1`
   transition: all 0.3s ease;
 
   @media (max-width: 800px) {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 `;
