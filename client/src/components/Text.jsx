@@ -28,11 +28,13 @@ const Container = styled.p`
   font-size: 1.5rem;
   color: ${(props) => props.color};
   transition: all 0.3s ease;
-  margin: 0 auto 1em auto;
+  margin: 0 auto 1em 1em;
 
   @media (max-width: 800px) {
     max-width: 22em;
     font-size: 1.2rem;
+    margin: 0 auto 1em auto;
+
   }
 
   @media (max-width: 400px) {

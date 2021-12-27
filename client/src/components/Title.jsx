@@ -31,7 +31,8 @@ const Container = styled.h1`
   font-size: 2rem;
   color: ${(props) => props.color};
   transition: all 0.3s ease;
-
+  margin: 0 auto;
+  margin-bottom: 1em;
   @media (max-width: 800px) {
     font-size: 1.8rem;
   }

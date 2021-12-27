@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Navbar from "../../components/navbar/Navbar";
 import About from "./About";
 import Hero from "./Hero";
+import Services from "./Services";
 
 
 const Home = () => {
@@ -10,6 +11,8 @@ const Home = () => {
             <Navbar/>
             <Hero/>
             <About/>
+            <Services/>
+            
             
         </Container>
     )

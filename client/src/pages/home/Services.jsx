@@ -11,4 +11,6 @@ const Services = () => {
 
 export default Services;
 
-const Container = styled.div``;
+const Container = styled.div`
+min-height: 20vh;
+`;

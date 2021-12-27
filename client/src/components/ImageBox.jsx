@@ -14,30 +14,62 @@ const ImageBox = ({ src, alt, text }) => {
 export default ImageBox;
 
 const Container = styled.div`
+  display: flex;
+  align-items: center;
   flex-direction: column;
   text-align: center;
-  max-height: 20em;
-  max-width: 20em;
+  max-height: 25em;
+  max-width: 25em;
+  margin: 0 auto;
+  color: var(--color-3);
+
+  &:hover{
+    color: black;
+  }
 
 `;
 
 const ImageContainer = styled.div`
   display: flex;
-  justify-content: center;
-  overflow: hidden;
-  flex-direction: column;
   border-radius: .5em .5em 0 0;
-
 `;
 
 const Image = styled.img`
-  height: 100%;
-  width: 100%;
+max-height: 24em;
+max-width: 24em;
+border-radius: .5em .5em 0 0;
+
+@media (max-width: 800px){
+    max-height: 22em;
+    max-width: 22em;
+
+}
+
+@media (max-width: 400px){
+    max-height: 20em;
+    max-width: 20em;
+}
+
+@media (max-width: 350px){
+    max-height: 18em;
+    max-width: 18em;
+}
+
+@media (max-width: 300px){
+    max-height: 16em;
+    max-width: 16em;
+}
+
+@media (max-width: 250px){
+    max-height: 14em;
+    max-width: 14em;
+}
+
+  
 `;
 
 const Text = styled.p`
   font-size: 1rem;
-  color: var(--color-3);
 
   @media (max-width: 800px) {
     font-size: 0.8rem;
