@@ -1,22 +1,28 @@
 import styled from "styled-components";
-import Title from "../../components/Title";
 import Text from "../../components/Text";
 import Button from "../../components/Button";
 import getWindowDimensions from "../../commonFunctions/Dimentions";
+import {Link} from "react-scroll";
 
 const Hero = () => {
     const { width } = getWindowDimensions();
 
   return (
-    <Container>
+    <Container id="hero">
 
         {width > 800  ? <><Left>
         {/* <Title color="color-2" text="MoJo Websites" /> */}
         <span></span>
         <Text text="MoJo Websites for deg som ønsker en enkel og perfekt fungerende nettside." color="color-2"/>
         <ButtonContainer>
+        <Link to="contact" spy={true} smooth={true} offset={-100} duration={300}>
         <Button text="Kontakt Oss" bc="color-2" />
-        <Button text="Prosjekter" bc="color-1" />
+
+          </Link>
+          <Link to="portfolio" spy={true} smooth={true} offset={-100} duration={300}>
+          <Button text="Prosjekter" bc="color-1" />
+
+          </Link>
         </ButtonContainer>
       </Left>
       <Right>
@@ -34,8 +40,14 @@ const Hero = () => {
       <Left>
         <Text text="MoJo Websites for deg som ønsker en enkel og perfekt fungerende nettside." color="color-2"/>
         <ButtonContainer>
+        <Link to="contact" spy={true} smooth={true} offset={-100} duration={300}>
         <Button text="Kontakt Oss" bc="color-2" />
-        <Button text="Kontakt Oss" bc="color-1" />
+
+          </Link>
+          <Link to="portfolio" spy={true} smooth={true} offset={-100} duration={300}>
+          <Button text="Prosjekter" bc="color-1" />
+
+          </Link>
         </ButtonContainer>
       </Left>
       </>} 

@@ -4,6 +4,7 @@ import Title from "../../components/Title";
 import Text from "../../components/Text";
 import Button from "../../components/Button";
 import getWindowDimensions from "../../commonFunctions/Dimentions";
+import {Link} from "react-scroll";
 
 
 const About = () => {
@@ -14,13 +15,16 @@ const About = () => {
     }
 
     return (
-        <Container>
+        <Container id="about">
 
 {width > 800  ? <><Left>
         <Title color="color-2" text="MoJo Websites" />
         <Text text="Dette er et startup prosjekt som går ut på å lage enkle og svært fungerende hjemmesider for de som ønsker det. Vi er 2 studenter, en datingeniør- og en frontend student." color="color-2"/>
         <ButtonContainer>
+        <Link to="contact" spy={true} smooth={true} offset={-100} duration={300}>
         <Button text="Kontakt Oss" bc="color-2" />
+
+</Link>
         </ButtonContainer>
       </Left>
       <Right onClick={() => window.location.href = 'https://johanneseandresen.netlify.app/'}
@@ -54,8 +58,10 @@ const About = () => {
       <Left>
         <Text text="Dette er et startup prosjekt som går ut på å lage enkle og svært fungerende hjemmesider for de som ønsker det. Vi er 2 studenter, en datingeniør- og en frontend student." color="color-2" />
         <ButtonContainer>
+        <Link to="contact" spy={true} smooth={true} offset={-100} duration={300}>
         <Button text="Kontakt Oss" bc="color-2" />
-        </ButtonContainer>
+
+</Link>        </ButtonContainer>
       </Left>
       </>} 
  
