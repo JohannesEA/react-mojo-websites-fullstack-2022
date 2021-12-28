@@ -141,6 +141,8 @@ const Container = styled.div`
   right: 0;
   width: 100%;
   height: auto;
+  margin-top: 3em;
+
   @media (max-width: 800px) {
     flex-direction: column;
     height: auto;

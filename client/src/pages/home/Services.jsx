@@ -115,9 +115,6 @@ const IconContainer = styled.div`
   }
 `;
 
-
-
-
 const Right = styled.div`
 margin: 0;
 `;

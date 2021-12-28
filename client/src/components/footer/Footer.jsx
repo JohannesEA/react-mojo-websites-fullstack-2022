@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {Link} from "react-scroll";
+import {AiOutlineCopyrightCircle} from "react-icons/ai"
 
 const Footer = () => {
   return (
@@ -12,12 +13,12 @@ const Footer = () => {
               smooth={true}
               offset={-100}
               duration={300}
-            >                <Image src="/assets/logos/mojo-logo2.png" alt="footer-img"/> </Link>
+            >                <Image src="/assets/logos/logo5.png" alt="footer-img"/> </Link>
  
       </Top>
 
       <Bottom>
-      Copyright mojo-websites.no
+      Copyright <AiOutlineCopyrightCircle/> mojo-websites.no
       </Bottom>
     </Container>
   );
@@ -30,6 +31,7 @@ display: flex;
 align-items: center;
 flex-direction: column;
 margin-top: 3em;
+background-color: var(--color-1)
 `;
 
 const Top = styled.div`

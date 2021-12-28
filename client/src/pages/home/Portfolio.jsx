@@ -25,14 +25,14 @@ const Portfolio = () => {
 export default Portfolio;
 
 const Container = styled.div`
-margin-top:2em;
+margin-top:3em;
 flex-direction: column;
 text-align: center;
 `;
 
 
 const ImageContainer = styled.div`
-    padding: 2em 0;
+    padding: 0;
     transition: all .3s ease;
 `;
 
