@@ -14,7 +14,7 @@ const Services = () => {
           <Left>
             <Title color="color-2" text="Tjenester" />
             <Text
-              text="Vi ønsker å gi deg den beste nettsiden til en billig penge. For tiden tilbyr vi 3 ulike tjenester. En informasjons-, en kjøp og salgs- og en dynamisk nettside. Disse forskjellige type nettsidene har ulik vanskelighets- og kompleksitets grad, og har derfor ulik pris."
+              text="Vi ønsker å gi deg den beste nettsiden til en billig penge. For tiden tilbyr vi 3 ulike tjenester. En informasjon/portfølje-, en nettbutikk- og en dynamisk nettside. Disse forskjellige type nettsidene har ulik vanskelighets- og kompleksitets grad, og har derfor ulik pris."
               color="color-2"
             />
   
@@ -37,7 +37,7 @@ const Services = () => {
               src="/assets/logos/icon4.png"
               alt="mojo-logo"
               text="Pris fra 12000 kr"
-              title="Nettside"
+              title="Nettbutikk"
             /></IconContainer>
             {/* <ImageBox
         src="/assets/images/headshot-magnus.png"
@@ -51,8 +51,8 @@ const Services = () => {
           <Left>
           <Title color="color-2" text="Tjenester" />
 
-            <Text
-              text="Vi ønsker å gi deg den beste nettsiden til en billig penge. For tiden tilbyr vi 3 ulike tjenester. En informasjons-, en kjøp og salgs- og en dynamisk nettside. Disse forskjellige type nettsidene har ulik vanskelighets- og kompleksitets grad, og har derfor ulik pris."
+          <Text
+              text="Vi ønsker å gi deg den beste nettsiden til en billig penge. For tiden tilbyr vi 3 ulike tjenester. En informasjon/portfølje-, en nettbutikk- og en dynamisk nettside. Disse forskjellige type nettsidene har ulik vanskelighets- og kompleksitets grad, og har derfor ulik pris."
               color="color-2"
             />
           </Left>
@@ -74,7 +74,7 @@ const Services = () => {
               src="/assets/logos/icon4.png"
               alt="mojo-logo"
               text="Pris fra 12000 kr"
-              title="Nettside"
+              title="Nettbutikk"
             /></IconContainer>
 
     
