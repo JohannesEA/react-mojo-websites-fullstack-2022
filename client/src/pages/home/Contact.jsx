@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { useState } from "react";
 import Button from "../../components/Button";
 import { send } from "emailjs-com";
-import Title from "../../components/Title"
+import Title from "../../components/Title";
+import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 
 const Contact = () => {
   const [confirmationMessage, setConfirmationMessage] = useState("");
@@ -70,6 +71,16 @@ const Contact = () => {
         name="myForm"
         onSubmit={handleSendRequest}
       >
+        <ContactInfoContainer>
+          <IconBox>
+            <AiOutlinePhone color="black" fontSize={20}/>
+            <Text>+47 99509035</Text> 
+          </IconBox>
+          <IconBox>
+          <AiOutlineMail color="black" fontSize={20}/>
+          <Text>mojo-websites1@gmail.com</Text> 
+          </IconBox>
+        </ContactInfoContainer>
         {/* <Label>Email</Label> */}
         <Input
           type="text"
@@ -136,8 +147,6 @@ const Container = styled.div`
   }
 `;
 
-
-
 const ContactForm = styled.form`
   flex: 1;
   flex-direction: column;
@@ -182,4 +191,27 @@ const ErrorMessage = styled.p`
 const ConfirmationMessage = styled.p`
   font-size: 1.2rem;
   color: #032859;
+`;
+
+const Text = styled.p`
+  font-size: 1.2rem;
+  margin-left: .5em;
+
+`;
+
+const ContactInfoContainer = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+`;
+const IconBox = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 `;
