@@ -16,7 +16,7 @@ const About = () => {
 
 {width > 800  ? <><Left>
         <Title color="color-2" text="Om Oss" />
-        <Text text="Dette er et startup prosjekt som går ut på å lage enkle og svært fungerende hjemmesider for de som ønsker det. Jeg går siste året på studet for å bli dataingeniør ved OsloMet." color="color-2"/>
+        <Text text="Dette er et startup prosjekt som går ut på å lage enkle og svært fungerende hjemmesider for de som ønsker det. Jeg går siste året på studiet for å bli dataingeniør ved OsloMet." color="color-2"/>
         <ButtonContainer>
         <Link to="contact" spy={true} smooth={true} offset={-100} duration={300}>
         <Button text="Kontakt Oss" bc="color-2" />
@@ -53,7 +53,7 @@ const About = () => {
 
       </Right>
       <Left>
-      <Text text="Dette er et startup prosjekt som går ut på å lage enkle og svært fungerende hjemmesider for de som ønsker det. Jeg går siste året på studet for å bli dataingeniør ved OsloMet." color="color-2"/>
+      <Text text="Dette er et startup prosjekt som går ut på å lage enkle og svært fungerende hjemmesider for de som ønsker det. Jeg går siste året på studiet for å bli dataingeniør ved OsloMet." color="color-2"/>
         <ButtonContainer>
         <Link to="contact" spy={true} smooth={true} offset={-100} duration={300}>
         <Button text="Kontakt Oss" bc="color-2" />
