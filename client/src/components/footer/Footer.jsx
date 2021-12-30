@@ -18,7 +18,7 @@ const Footer = () => {
       </Top>
 
       <Bottom>
-      Copyright <AiOutlineCopyrightCircle/> mojo-websites.no
+      mojo-websites.no&nbsp;<AiOutlineCopyrightCircle/>&nbsp;2021
       </Bottom>
     </Container>
   );

@@ -112,7 +112,7 @@ text-align: center;
 
 const Image = styled.img`
 transition: max-height .3s ease;
-max-height: 24em;
+max-height: 25em;
 
 @media (max-width: 800px){
     max-height: 22em;

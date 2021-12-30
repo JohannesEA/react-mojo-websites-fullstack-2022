@@ -36,22 +36,17 @@ const ImageContainer = styled.div`
 `;
 
 const Image = styled.img`
-max-height: 10em;
-max-width: 10em;
+max-height: 8em;
+max-width: 8em;
 border-radius: .5em .5em 0 0;
 
 @media (max-width: 800px){
-    max-height: 8em;
-    max-width: 8em;
+    max-height: 6em;
+    max-width: 6em;
 
 }
 
 @media (max-width: 400px){
-    max-height: 6em;
-    max-width: 6em;
-}
-
-@media (max-width: 350px){
     max-height: 4em;
     max-width: 4em;
 }
