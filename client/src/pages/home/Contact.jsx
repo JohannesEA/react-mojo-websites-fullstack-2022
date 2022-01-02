@@ -4,10 +4,12 @@ import Button from "../../components/Button";
 import { send } from "emailjs-com";
 import Title from "../../components/Title";
 import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
+import LoadingAnimation from "../../components/LoadingAnimation";
 
 const Contact = () => {
   const [confirmationMessage, setConfirmationMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [isLoading, setIsLoading] = useState("");
 
   //Request message state => the userrequest that will get validated and sent to our mailbox
   const [requestMessage, setRequestMessage] = useState({
@@ -27,6 +29,7 @@ const Contact = () => {
 
   const handleSendRequest = (e) => {
     e.preventDefault();
+    setIsLoading(true);
     if (
       validation(
         requestMessage.email,
@@ -44,6 +47,7 @@ const Contact = () => {
         function (response) {
           console.log("SUCCESS!", response.status, response.text);
           setErrorMessage("");
+          setIsLoading(false);
           setConfirmationMessage(
             "Takk for at du ønsker å komme i kontakt med oss. Vi svarer så fort vi kan."
           );
@@ -51,10 +55,12 @@ const Contact = () => {
         function (error) {
           console.log("FAILED...", error);
           setErrorMessage("Noe gikk galt.");
+          setIsLoading(false);
         }
       );
     } else {
       setErrorMessage("Alle felt må være fylt ut. Prøv igjen.");
+      setIsLoading(false);
     }
   };
 
@@ -73,12 +79,12 @@ const Contact = () => {
       >
         <ContactInfoContainer>
           <IconBox>
-            <AiOutlinePhone color="black" fontSize={20}/>
-            <Text>+47 99509035</Text> 
+            <AiOutlinePhone color="black" fontSize={20} />
+            <Text>+47 99509035</Text>
           </IconBox>
           <IconBox>
-          <AiOutlineMail color="black" fontSize={20}/>
-          <Text>mojo-websites1@gmail.com</Text> 
+            <AiOutlineMail color="black" fontSize={20} />
+            <Text>mojo-websites1@gmail.com</Text>
           </IconBox>
         </ContactInfoContainer>
         {/* <Label>Email</Label> */}
@@ -119,6 +125,7 @@ const Contact = () => {
           bc="color-2"
           btnOnClick={handleSendRequest}
         ></Button>
+        {isLoading && <LoadingAnimation />}
         {confirmationMessage.length > 0 && (
           <ConfirmationMessage>{confirmationMessage}</ConfirmationMessage>
         )}
@@ -154,7 +161,7 @@ const ContactForm = styled.form`
   flex-direction: column;
   text-align: center;
   border-radius: 1em;
-  padding: 1em 1em 0 1em;
+  padding: 1em 1em .5em 1em;
   background-color: #fff;
   box-shadow: 0px 0px 4px 2px var(--color-hover);
   width: 80%;
@@ -184,8 +191,8 @@ const TextArea = styled.textarea`
   max-width: 100%;
   font-size: 1.2rem;
   min-height: 10em;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -202,8 +209,7 @@ const ConfirmationMessage = styled.p`
 
 const Text = styled.p`
   font-size: 1.2rem;
-  margin-left: .5em;
-
+  margin-left: 0.5em;
 `;
 
 const ContactInfoContainer = styled.div`
@@ -213,7 +219,6 @@ const ContactInfoContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-
 `;
 const IconBox = styled.div`
   flex: 1;

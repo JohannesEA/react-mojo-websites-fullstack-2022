@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import GlobalStyles from "./constants/GlobalStyles";
-import Home from "./pages/home/Home";
+import Home from "./pages/home/Home"
 
 const App = () => {
   return (
