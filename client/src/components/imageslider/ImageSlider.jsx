@@ -40,15 +40,11 @@ const ImageSlider = ({ images, slidesToShow = 3 }) => {
     focusOnSelect: true,
     nextArrow: <NextArrow onClick />,
     prevArrow: <PrevArrow onClick />,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+
     beforeChange: (current, next) => setImageIndex(next),
     responsive: [
-      {
-        breakpoint: 1490,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
       {
         breakpoint: 820,
         settings: {
@@ -70,15 +66,13 @@ const ImageSlider = ({ images, slidesToShow = 3 }) => {
           {image.code ? (
             image.code
           ) : (
-            <img
-              className="slideimage"
-              src={image.src}
-              alt={image.alt}
-            />
+            <img className="slideimage" src={image.src} alt={image.alt} />
           )}
         </div>
-        <button  onClick={() => (window.location.href = image.url)}> Mer Info</button>
-
+        <button onClick={() => (window.location.href = image.url)}>
+          {" "}
+          Mer Info
+        </button>
       </div>
     );
   });
