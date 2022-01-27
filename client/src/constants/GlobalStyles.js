@@ -11,7 +11,6 @@ const GlobalStyles = createGlobalStyle`
     --color-text: black;
   }
 
-  
 `;
 
 export default GlobalStyles;
