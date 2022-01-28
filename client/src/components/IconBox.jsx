@@ -20,7 +20,7 @@ const Container = styled.div`
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
   color: var(--color-3);
   border-radius: 0.5em;
   box-shadow: 0px 0px 4px 2px var(--color-hover);
@@ -34,6 +34,7 @@ const Container = styled.div`
 
   @media (max-width: 800px) {
     margin: 1em auto;
+    width: 100%;
   }
 `;
 
