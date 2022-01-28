@@ -1,15 +1,17 @@
 {
-  "name": "react-mojo-websites-fullstack-2022",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "styled-components": "^5.3.3"
-  }
+    "name": "react-mojo-websites-fullstack-2022",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "cd ./api && npm run start",
+        "dev": "concurrently \"cd api && npm run start\" \"cd client && npm start\"",
+        "format": "prettier --write 'client/*.js' 'api/*.js'"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "styled-components": "^5.3.3"
+    }
 }
