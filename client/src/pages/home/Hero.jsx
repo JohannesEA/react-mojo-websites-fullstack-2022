@@ -44,13 +44,13 @@ const Hero = () => {
             </ButtonContainer>
           </Left>
           <Right>
-            <Image src="/assets/logos/mojo-logo2.png" alt="mojo-logo" />
+            <Image src="/assets/logos/mojo/mwl.png" alt="mojo-logo" />
           </Right>
         </>
       ) : (
         <>
           <Right>
-            <Image src="/assets/logos/mojo-logo2.png" alt="mojo-logo" />
+            <Image src="/assets/logos/mojo/mwl.png" alt="mojo-logo" />
           </Right>
           <Left>
             <TextContainer>

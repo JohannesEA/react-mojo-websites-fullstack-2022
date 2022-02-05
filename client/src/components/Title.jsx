@@ -4,23 +4,20 @@ import { useState, useEffect } from "react";
 const Title = ({ text, color }) => {
   const [textColor, setTextColor] = useState("");
   const COLORONE = "black";
-  const COLORTWO = "#594AE3";
+  const COLORTWO = "var(--color-1)";
 
- 
   useEffect(() => {
-      const setColor = () => {
-        if (color === "color-1") {
-            setTextColor(COLORONE);
-          } else if (color === "color-2") {
-            setTextColor(COLORTWO);
-          } else{
-            setTextColor(color);
-          }
+    const setColor = () => {
+      if (color === "color-1") {
+        setTextColor(COLORONE);
+      } else if (color === "color-2") {
+        setTextColor(COLORTWO);
+      } else {
+        setTextColor(color);
       }
-      setColor();
+    };
+    setColor();
   }, [textColor]);
-
-
 
   return <Container color={textColor}>{text}</Container>;
 };
